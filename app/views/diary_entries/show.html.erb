@@ -1,2 +1,121 @@
-<h1>DiaryEntries#show</h1>
-<p>Find me in app/views/diary_entries/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1><%= @diary_entry.date %></h1>
+      <h2>A: Activating Event</h2>
+        <ul>
+          <li>
+            This may include an actual event or situation, a thought, mental picture or physical trigger.
+          </li>
+        <div class="card">
+          <p>
+            <%= @diary_entry.a_event %>
+          </p>
+        </div>
+        </ul>
+
+      <h2>C: Consequences</h2>
+        <ol>
+          <li>Write down words describing how you feel.</li>
+          <li>Underline the one that is most associated with the activating event.</li>
+          <li>Rate the intensity of those feelings (0 to 100).</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+          <li>Jot down any physical sensations you experienced or actions you carried out.</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+        </ol>
+
+      <h2>B: Beliefs</h2>
+        <ol>
+          <li>List all self-statements that link A to C. Ask yourself: “What was I thinking?“ “What was I saying to myself?“ “What was going through my head at the time?“</li>
+          <li>Find the most distressing (hot) thought and underline it.</li>
+          <li>Rate how much you believe this thought from 0 to 100.</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+          <li><strong>Thought Discovery Question: "...and what does that mean?"</strong></li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+        </ol>
+      <h2>D: Detective Work & Disputation</h2>
+        <ul>
+          <li>Now refer to the hot thought and ask yourself: “What is the factual evidence for and against my hot thought?”</li>
+          <ul>
+            <li>My Hot Thought:</li>
+            <div class="card">
+              <p>
+                <%= @diary_entry.a_event %>
+              </p>
+            </div>
+            <li>Factual Evidence for my Hot Thought:</li>
+            <div class="card">
+              <p>
+                <%= @diary_entry.a_event %>
+              </p>
+            </div>
+            <li>Factual Evidence against my Hot Thought:</li>
+            <div class="card">
+              <p>
+                <%= @diary_entry.a_event %>
+              </p>
+            </div>
+          </ul>
+        </ul>
+        <ul>
+          <li>Disputation Questions:</li>
+          <li>What other ways are there of viewing the situation?</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+          <li>If I were not feeling this way, how might I view the situation differently?</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+        </ul>
+      <h2>E: End Result</h2>
+        <ul>
+          <li><strong>Balanced Thoughts: </strong>After looking at all the evidence for and against your hot thought, and having considered the disputation questions, replace the hot thought with helpful, balanced thought/s.</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+          <li><strong>Re-rate Emotion: </strong>Now, re-rate the emotion you underlined in C, from 1 to 100.</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+          <li><strong>Re-rate Hot Thought: </strong>Read through Detective Work & Disputation. Now re-rate how much you believe the hot thought, from 0 to 100.</li>
+          <div class="card">
+            <p>
+              <%= @diary_entry.a_event %>
+            </p>
+          </div>
+        </ul>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <%= link_to "Back to all entries", root_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>

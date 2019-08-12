@@ -1,2 +1,17 @@
-<h1>DiaryEntries#new</h1>
-<p>Find me in app/views/diary_entries/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>New Journal Entry</h1>
+      <%= form_for @diary_entry do |f| %>
+        <h2>A: Activating Event</h2>
+          <ul>
+            <li>
+              This may include an actual event or situation, a thought, mental picture or physical trigger.
+            </li>
+          <%= f.text_area :a_event, :cols => 80, :rows => 10, class: "long-text-field" %>
+          </ul>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

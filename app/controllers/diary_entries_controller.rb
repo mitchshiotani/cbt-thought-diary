@@ -8,6 +8,7 @@ class DiaryEntriesController < ApplicationController
   end
 
   def new
+    @diary_entry = DiaryEntry.new
   end
 
   def create

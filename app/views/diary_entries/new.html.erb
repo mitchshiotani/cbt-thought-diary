@@ -3,6 +3,7 @@
     <div class="col">
       <h1>New Journal Entry</h1>
       <%= form_for @diary_entry do |f| %>
+      <!-- A -->
         <h2>A: Activating Event</h2>
           <ul>
             <li>
@@ -10,6 +11,62 @@
             </li>
           <%= f.text_area :a_event, :cols => 80, :rows => 10, class: "long-text-field" %>
           </ul>
+      <!-- C -->
+        <h2>C: Consequences</h2>
+          <ol>
+            <li>Write down words describing how you feel.</li>
+            <li>Underline the one that is most associated with the activating event.</li>
+            <li>Rate the intensity of those feelings (0 to 100).</li>
+            <%= f.text_area :c_emotion, :cols => 80, :rows => 10, class: "long-text-field" %>
+            <li>Jot down any physical sensations you experienced or actions you carried out.</li>
+            <%= f.text_area :c_physical_sensation, :cols => 80, :rows => 10, class: "long-text-field" %>
+          </ol>
+      <!-- B -->
+        <h2>B: Beliefs</h2>
+        <ol>
+          <li>List all self-statements that link A to C. Ask yourself: “What was I thinking?“ “What was I saying to myself?“ “What was going through my head at the time?“</li>
+          <li>Find the most distressing (hot) thought and underline it.</li>
+          <li>Rate how much you believe this thought from 0 to 100.</li>
+          <%= f.text_area :b_self_statement, :cols => 80, :rows => 10, class: "long-text-field" %>
+          <li><strong>Thought Discovery Question: "...and what does that mean?"</strong></li>
+          <%= f.text_area :b_hot_thought, :cols => 80, :rows => 10, class: "long-text-field" %>
+
+        </ol>
+      <!-- D -->
+        <h2>D: Detective Work & Disputation</h2>
+        <ul>
+          <li>Now refer to the hot thought and ask yourself: “What is the factual evidence for and against my hot thought?”</li>
+          <ul>
+            <li>My Hot Thought:</li>
+            <p>Note to self: need a way to display HT here</p>
+            <li>Factual Evidence for my Hot Thought:</li>
+            <%= f.text_area :d_facts_for, :cols => 80, :rows => 10, class: "long-text-field" %>
+            <li>Factual Evidence against my Hot Thought:</li>
+            <%= f.text_area :d_facts_against, :cols => 80, :rows => 10, class: "long-text-field" %>
+          </ul>
+        </ul>
+        <ul>
+          <li>Disputation Questions:</li>
+          <ul>
+            <li>What other ways are there of viewing the situation?</li>
+            <%= f.text_area :d_other_view, :cols => 80, :rows => 10, class: "long-text-field" %>
+            <li>If I were not feeling this way, how might I view the situation differently?</li>
+            <%= f.text_area :d_different_view, :cols => 80, :rows => 10, class: "long-text-field" %>
+          </ul>
+        </ul>
+      <!-- E -->
+        <h2>E: End Result</h2>
+        <ul>
+          <li><strong>Balanced Thoughts: </strong>After looking at all the evidence for and against your hot thought, and having considered the disputation questions, replace the hot thought with helpful, balanced thought/s.</li>
+          <%= f.text_area :e_balanced_thought, :cols => 80, :rows => 10, class: "long-text-field" %>
+          <li><strong>Re-rate Emotion: </strong>Now, re-rate the emotion you underlined in C, from 1 to 100.</li>
+          <%= f.text_area :e_emotion_rerate, :cols => 80, :rows => 10, class: "long-text-field" %>
+
+          <li><strong>Re-rate Hot Thought: </strong>Read through Detective Work & Disputation. Now re-rate how much you believe the hot thought, from 0 to 100.</li>
+          <%= f.text_area :e_hot_thought_rerate, :cols => 80, :rows => 10, class: "long-text-field" %>
+
+        </ul>
+      <!-- end -->
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
     </div>

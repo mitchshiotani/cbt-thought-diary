@@ -1,0 +1,10 @@
+<h2>E: End Result</h2>
+  <ul>
+    <li><strong>Balanced Thoughts: </strong>After looking at all the evidence for and against your hot thought, and having considered the disputation questions, replace the hot thought with helpful, balanced thought/s.</li>
+    <%= f.text_area :e_balanced_thought, :cols => 80, :rows => 10, class: "long-text-field" %>
+    <li><strong>Re-rate Emotion: </strong>Now, re-rate the emotion you underlined in C, from 1 to 100.</li>
+    <%= f.text_area :e_emotion_rerate, :cols => 80, :rows => 10, class: "long-text-field" %>
+
+    <li><strong>Re-rate Hot Thought: </strong>Read through Detective Work & Disputation. Now re-rate how much you believe the hot thought, from 0 to 100.</li>
+    <%= f.text_area :e_hot_thought_rerate, :cols => 80, :rows => 10, class: "long-text-field" %>
+  </ul>

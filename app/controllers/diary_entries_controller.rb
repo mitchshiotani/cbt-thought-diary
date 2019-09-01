@@ -10,16 +10,33 @@ class DiaryEntriesController < ApplicationController
   end
 
   def new
-    @diary_entry = DiaryEntry.new
+    session[:diary_entry_params] ||= {}
+    @diary_entry = DiaryEntry.new(session[:diary_entry_params])
+    @diary_entry.current_step = session[:diary_entry_step]
   end
 
   def create
-    @diary_entry = DiaryEntry.new(diary_entry_params)
-    if @diary_entry.create
-      redirect_to diary_entry_path(@diary_entry)
-    else
-      render :new
-    end
+    session[:order_params].deep_merge!(params[:order]) if params[:order]
+      @diary_entry = DiaryEntry.new(session[:diary_entry_params])
+      @diary_entry.current_step = session[:diary_entry_step]
+      @diary_entry.date = Date.today
+      if @diary_entry.valid?
+        if params[:back_button]
+          @diary_entry.previous_step
+        elsif @diary_entry.last_step?
+          @diary_entry.save if @diary_entry.all_valid?
+        else
+          @diary_entry.next_step
+        end
+        session[:diary_entry_step] = @diary_entry.current_step
+      end
+      if @diary_entry.new_record?
+        render :new
+      else
+        session[:diary_entry_step] = session[:diary_entry_params] = nil
+        flash[:notice] = "Diary Entry saved!"
+        redirect_to @diary_entry
+      end
   end
 
   def update

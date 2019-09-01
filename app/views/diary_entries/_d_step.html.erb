@@ -1,0 +1,21 @@
+<h2>D: Detective Work & Disputation</h2>
+  <ul>
+    <li>Now refer to the hot thought and ask yourself: “What is the factual evidence for and against my hot thought?”</li>
+    <ul>
+      <li>My Hot Thought:</li>
+      <p>Note to self: need a way to display HT here</p>
+      <li>Factual Evidence for my Hot Thought:</li>
+      <%= f.text_area :d_facts_for, :cols => 80, :rows => 10, class: "long-text-field" %>
+      <li>Factual Evidence against my Hot Thought:</li>
+      <%= f.text_area :d_facts_against, :cols => 80, :rows => 10, class: "long-text-field" %>
+    </ul>
+  </ul>
+  <ul>
+    <li>Disputation Questions:</li>
+    <ul>
+      <li>What other ways are there of viewing the situation?</li>
+      <%= f.text_area :d_other_view, :cols => 80, :rows => 10, class: "long-text-field" %>
+      <li>If I were not feeling this way, how might I view the situation differently?</li>
+      <%= f.text_area :d_different_view, :cols => 80, :rows => 10, class: "long-text-field" %>
+    </ul>
+  </ul>

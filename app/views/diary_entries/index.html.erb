@@ -4,17 +4,7 @@
   <div class="container">
     <div class="row my-4 py-4">
       <% @diary_entries.each do |entry| %>
-      <div class="col-4 my-3">
-        <%= link_to diary_entry_path(entry) do %>
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title"><%= entry.date %></h5>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        <% end %>
-
-      </div>
+        <%= render 'diary_entry_card', entry: entry %>
       <% end %>
     </div>
   </div>

@@ -5,7 +5,32 @@ body
   padding: 0;
 
   /* make it look decent enough */
-  background: #C0C1C3;
-  color: #cdcdcd;
+  background: $light-gray;
+  color: white;
   font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.title {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.home-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-box {
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.feeling-bubble {
+  padding: 10px 0px;
+  border-bottom: 1px solid #EBEBEB !important;
+  h4 {
+    margin-bottom: 0px !important;
+  }
 }

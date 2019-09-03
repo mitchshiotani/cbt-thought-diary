@@ -25,11 +25,6 @@ body
   padding: 15px;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);
-  transition: box-shadow 0.3s;
-  &:hover {
-    box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-  }
 }
 
 .feeling-bubble {
@@ -37,5 +32,17 @@ body
   border-bottom: 1px solid #EBEBEB !important;
   h4 {
     margin-bottom: 0px !important;
+  }
+}
+
+.box-button {
+  border: 1px solid white;
+  padding: 10px;
+  background: $light-gray;
+  color: white;
+  box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
   }
 }

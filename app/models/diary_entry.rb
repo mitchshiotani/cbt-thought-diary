@@ -11,7 +11,7 @@ class DiaryEntry < ApplicationRecord
   end
 
   def steps
-    %w[a c b d e]
+    %w[init a c b d e]
   end
 
   def next_step

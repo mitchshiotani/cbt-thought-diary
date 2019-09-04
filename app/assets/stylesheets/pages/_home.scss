@@ -25,6 +25,10 @@ body
   padding: 15px;
   border-radius: 5px;
   text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .feeling-bubble {
@@ -44,5 +48,7 @@ body
   transition: box-shadow 0.3s;
   &:hover {
     box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    color: white;
+    text-decoration: none;
   }
 }

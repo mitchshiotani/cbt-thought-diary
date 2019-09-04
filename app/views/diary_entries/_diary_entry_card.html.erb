@@ -1,8 +1,8 @@
   <div class="col-6 my-3">
-    <div class="card", style="border-radius: 10px;">
+    <div class="home-box">
       <%= link_to diary_entry_path(entry) do %>
-        <div class="card-body">
-          <h5 class="card-title text-center"><%= entry.date.strftime('%B %d, %A') %></h5>
+        <div>
+          <h5><%= entry.date.strftime('%B %d, %A') %></h5>
           <h5>Feeling: </h5>
           <p><%= entry.c_emotion %></p>
           <h5>Hot Thought:</h5>

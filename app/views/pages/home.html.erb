@@ -12,11 +12,7 @@
           <h4>
             Calendar
           </h4>
-          <button class="box-button">
-            <%= link_to diary_entries_path do %>
-            + Add Journal Entry
-            <% end %>
-          </button>
+            <%= link_to '+ Add Journal Entry', diary_entries_path, class: 'box-button' %>
         </div>
       </div>
     </div>
@@ -42,9 +38,7 @@
         <div class="container">
           <div class="row">
             <div class="col mt-4">
-              <button class="box-button">
-                See More Feelings
-              </button>
+              <%= link_to 'See More Feelings', root_path, class: 'box-button' %>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@
 
       <!-- end -->
         <%= f.submit 'Continue', class: "box-button" %>
-        <%= f.submit "Back", :name => "back_button" unless @diary_entry.first_step? %>
+        <%= f.submit "Back", class: 'rev-box-button', :name => "back_button" unless @diary_entry.first_step? %>
       <% end %>
     </div>
   </div>

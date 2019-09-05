@@ -52,3 +52,17 @@ body
     text-decoration: none;
   }
 }
+.rev-box-button {
+  border: 1px solid $light-gray;
+  padding: 10px;
+  background: white;
+  color: $light-gray;
+  box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    text-decoration: none;
+  }
+}
+
+

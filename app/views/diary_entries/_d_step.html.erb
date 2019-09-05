@@ -3,7 +3,7 @@
     <li>Now refer to the hot thought and ask yourself: “What is the factual evidence for and against my hot thought?”</li>
     <ul>
       <li>My Hot Thought:</li>
-      <p>Note to self: need a way to display HT here</p>
+      <p><%= @diary_entry.b_hot_thought %></p>
       <li>Factual Evidence for my Hot Thought:</li>
       <%= f.text_area :d_facts_for, :cols => 80, :rows => 10, class: "long-text-field" %>
       <li>Factual Evidence against my Hot Thought:</li>

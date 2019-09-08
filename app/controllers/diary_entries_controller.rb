@@ -13,6 +13,7 @@ class DiaryEntriesController < ApplicationController
     session[:diary_entry_params] ||= {}
     @diary_entry = DiaryEntry.new(session[:diary_entry_params])
     @diary_entry.current_step = session[:diary_entry_step]
+    @emotions = Emotion.all
   end
 
   def create

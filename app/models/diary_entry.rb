@@ -3,6 +3,7 @@ class DiaryEntry < ApplicationRecord
   has_many :emotions, through: :de_emotions
   has_many :deut_styles
   has_many :ut_styles, through: :deut_styles
+  accepts_nested_attributes_for :de_emotions, allow_destroy: true
 
   attr_writer :current_step
 

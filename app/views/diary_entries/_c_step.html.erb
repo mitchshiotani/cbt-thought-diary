@@ -1,9 +1,10 @@
 <h2>C: Consequences</h2>
   <ol>
-    <li>Write down words describing how you feel.</li>
+    <li>Select words describing how you feel.</li>
+    <%= f.select :c_emotion, Emotion.all.collect {|emotion| [ emotion.name.titleize, emotion.id ] }, {:include_blank => true}, {:multiple => true, :size =>10} %>
     <li>Underline the one that is most associated with the activating event.</li>
     <li>Rate the intensity of those feelings (0 to 100).</li>
-    <%= f.text_area :c_emotion, :cols => 80, :rows => 10, class: "long-text-field" %>
     <li>Jot down any physical sensations you experienced or actions you carried out.</li>
     <%= f.text_area :c_physical_sensation, :cols => 80, :rows => 10, class: "long-text-field" %>
   </ol>
+

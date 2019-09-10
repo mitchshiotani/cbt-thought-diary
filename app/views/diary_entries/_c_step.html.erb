@@ -1,16 +1,9 @@
 <h2>C: Consequences</h2>
   <ol>
     <li>Select words describing how you feel.</li>
-    <%= f.fields_for :de_emotions do |ff| %>
-      <div>
-        <%= ff.check_box :_destroy,
-              {:checked => ff.object.persisted?},
-              '0', '1'
-        %>
-        <%= ff.label :_destroy, ff.object.emotion.name %>
-        <%= ff.hidden_field :emotion_id %>
-      </div>
-    <% end %>
+
+    <%= f.collection_check_boxes :emotion_ids, Emotion.all, :id, :name %>
+
     <%#= f.select :c_emotion, Emotion.all.collect {|emotion| [ emotion.name.titleize, emotion.id ] }, {:include_blank => true}, {:multiple => true, :size =>10} %>
     <li>Underline the one that is most associated with the activating event.</li>
     <li>Rate the intensity of those feelings (0 to 100).</li>

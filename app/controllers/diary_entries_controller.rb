@@ -21,6 +21,9 @@ class DiaryEntriesController < ApplicationController
     @diary_entry = DiaryEntry.new(session[:diary_entry_params])
     @diary_entry.current_step = session[:diary_entry_step]
     @diary_entry.date = Date.today
+    # params[:emotions]. each do |k, _v|
+    #   @diary_entry.emotions << Emotion.find(k)
+    # end
     if @diary_entry.valid?
       if params[:back_button]
         @diary_entry.previous_step

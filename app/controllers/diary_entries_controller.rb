@@ -55,6 +55,8 @@ class DiaryEntriesController < ApplicationController
   private
 
   def diary_entry_params
-    params.require(:diary_entry).permit!
+    if params.include?(:diary_entry)
+      params.require(:diary_entry).permit!
+    end
   end
 end

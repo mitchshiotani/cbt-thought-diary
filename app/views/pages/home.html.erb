@@ -1,49 +1,14 @@
 <div class="container">
   <div class="title text-center">
-    <h2>How are you feeling today, Mitch?</h2>
+    <h2>How are you feeling today?</h2>
+    <br>
+    <p><b><em>CBT Thought Diary</em></b> is an app where you can make journal entries following the principles of Cognitive Behavioral Therapy (CBT), to help you understand what you may be feeling throughout the day, and what kind of effect they have on your mood and the decisions you made.  </p>
+    <br>
+    <p><b><em>Click the button below to view your diary, and to start creating your journal entries.  Happy journaling!</em></b></p>
+    <br>
   </div>
-  <div class="row justify-content-between">
-    <div class="col-6">
-      <div class="home-box">
-        <div>
-          <h3>
-            Your Entries
-          </h3>
-          <h4>
-            Calendar
-          </h4>
-            <%= link_to 'See Your Diary', diary_entries_path, class: 'box-button' %>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="home-box">
-        <h3>
-          Your Feelings
-        </h3>
-        <div class="container">
-          <div class="row">
-            <div class="col-6">
-              <div class="feeling-bubble">
-                <h4>angry</h4>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="feeling-bubble">
-                <h4>inadequate</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col mt-4">
-              <%= link_to 'See More Feelings', root_path, class: 'box-button' %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="row justify-content-center">
+    <%= link_to 'See Your Diary', diary_entries_path, class: 'box-button text-center' %>
   </div>
 </div>
 

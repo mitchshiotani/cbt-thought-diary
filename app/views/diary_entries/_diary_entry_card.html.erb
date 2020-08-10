@@ -1,14 +1,31 @@
   <div class="col-6 my-3">
-    <div class="home-box">
+    <div class="home-box container">
       <%= link_to diary_entry_path(entry) do %>
-        <div>
-          <h5><%= entry.date.strftime('%B %d, %A') %></h5>
-          <h5>Feeling: </h5>
-          <p><%= entry.c_emotion %></p>
-          <h5>Hot Thought:</h5>
-          <p><%= entry.b_hot_thought %></p>
-          <h5>Balanced Thought: </h5>
-          <p><%= entry.e_balanced_thought %></p>
+        <div class="box-content">
+          <h5><%= entry.date.strftime('%B %d, %Y (%A)') %></h5>
+        </div>
+        <br>
+        <div class="box-content">
+          <p><b>Feeling: </b></p>
+          <% if entry.c_emotion %>
+            <p><%= entry.c_emotion %></p>
+          <% else %>
+            <p> <em>Not specified</em> </p>
+          <% end %>
+          <p><b>Hot Thought: </b></p>
+          <% if entry.b_hot_thought %>
+            <p><%= entry.b_hot_thought %></p>
+          <% else %>
+            <p> <em>Not specified</em> </p>
+          <% end %>
+
+          <p><b>Balanced Thought: </b></p>
+          <% if entry.e_balanced_thought %>
+            <p><%= entry.e_balanced_thought %></p>
+          <% else %>
+            <p> <em>Not specified</em> </p>
+          <% end %>
+
         </div>
       <% end %>
     </div>

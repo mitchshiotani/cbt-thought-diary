@@ -43,13 +43,13 @@
           <li>Rate how much you believe this thought from 0 to 100.</li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.b_self_statement %>
             </p>
           </div>
           <li><strong>Thought Discovery Question: "...and what does that mean?"</strong></li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.b_hot_thought %>
             </p>
           </div>
         </ol>
@@ -63,19 +63,19 @@
             <li>My Hot Thought:</li>
             <div class="card">
               <p>
-                <%= @diary_entry.a_event %>
+                <%= @diary_entry.b_hot_thought %>
               </p>
             </div>
             <li>Factual Evidence for my Hot Thought:</li>
             <div class="card">
               <p>
-                <%= @diary_entry.a_event %>
+                <%= @diary_entry.d_facts_for %>
               </p>
             </div>
             <li>Factual Evidence against my Hot Thought:</li>
             <div class="card">
               <p>
-                <%= @diary_entry.a_event %>
+                <%= @diary_entry.d_facts_against %>
               </p>
             </div>
           </ul>
@@ -85,13 +85,13 @@
           <li>What other ways are there of viewing the situation?</li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.d_other_view %>
             </p>
           </div>
           <li>If I were not feeling this way, how might I view the situation differently?</li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.d_different_view %>
             </p>
           </div>
         </ul>
@@ -103,19 +103,19 @@
           <li><strong>Balanced Thoughts: </strong>After looking at all the evidence for and against your hot thought, and having considered the disputation questions, replace the hot thought with helpful, balanced thought/s.</li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.e_balanced_thought %>
             </p>
           </div>
           <li><strong>Re-rate Emotion: </strong>Now, re-rate the emotion you underlined in C, from 1 to 100.</li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.e_emotion_rerate %>
             </p>
           </div>
           <li><strong>Re-rate Hot Thought: </strong>Read through Detective Work & Disputation. Now re-rate how much you believe the hot thought, from 0 to 100.</li>
           <div class="card">
             <p>
-              <%= @diary_entry.a_event %>
+              <%= @diary_entry.e_hot_thought_rerate %>
             </p>
           </div>
         </ul>
